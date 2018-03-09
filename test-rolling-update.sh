@@ -32,7 +32,7 @@ set -B # enable brace expansion
 for i in {1..10000}; do
     STATUSCODE=$(curl --silent --output /dev/null --write-out "%{http_code}" $URL)
     if test $STATUSCODE -ne 200; then
-        echo "BOOM"
+        echo "BOOM $STATUSCODE"
     fi
 
     n=$((i%100))
