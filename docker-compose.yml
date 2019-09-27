@@ -1,7 +1,7 @@
 version: "3.3"
 services:
     openjdk8:
-        image: openjdk:8-jdk-slim
+        image: openjdk:8-jdk
         working_dir: /code/
         volumes:
         - type: bind
@@ -11,7 +11,7 @@ services:
         - TERM=dumb
 
     openjdk11:
-        image: openjdk:11-jdk-slim
+        image: openjdk:11-jdk
         working_dir: /code/
         volumes:
          - type: bind
